@@ -1,13 +1,13 @@
 # Drone Web App :rocket:
-A Twitter-like web app where you can see posts about drones. 🚁 <br>
-Some of the core features of the platform:
-:arrow_right: Sign up, log in & log out. <br>
-:arrow_right: User profile. <br>
-:arrow_right: Following feature. <br>
-:arrow_right: Posts. <br>
-:arrow_right: News Feed. <br>
-:arrow_right: Password reset. <br>
-:arrow_right: Account activation. 
+A Twitter-like web app where you can see posts about drones. 🚁 👨‍💻
+<br> Some of the core features of the platform:
+<br> :arrow_right: Sign up, log in & log out.
+<br> :arrow_right: User profile.
+<br> :arrow_right: Following feature. 
+<br> :arrow_right: Posts. 
+<br> :arrow_right: News Feed. 
+<br> :arrow_right: Password reset. 
+<br> :arrow_right: Account activation. 
 
 
 ## Built With
