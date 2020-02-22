@@ -27,6 +27,8 @@ gem 'will_paginate'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'database_cleaner'
+  gem 'rack_session_access'
   gem 'sqlite3'
 end
 
@@ -34,6 +36,7 @@ group :development do
   gem 'bullet'
   gem 'guard', '~> 2.16', '>= 2.16.1'
   gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'rspec-rails'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0'
