@@ -1,5 +1,5 @@
 # Moto-Rocket Web App :rocket:
-A Twitter-like web app where you can see posts about bikes. :bike: 👨‍💻
+A Twitter-like web app where you can see posts about motorcycles. :bike: 👨‍💻
 <br> Some of the core features of the platform:
 <br> :arrow_right: Sign up, log in & log out.
 <br> :arrow_right: User profile.
