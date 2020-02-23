@@ -14,7 +14,7 @@ $gray-medium-light: #eaeaea;
 /* universal */
 
 body {
-  padding-top: 60px;
+  padding-top: 0;
 }
 
 section {
@@ -80,8 +80,8 @@ p {
 /* footer */
 
 footer {
-  margin-top: 45px;
-  padding-top: 5px;
+  margin-top: 0;
+  padding-top: 0;
   border-top: 1px solid $gray-medium-light;
   color: $gray-light;
   a {
@@ -330,4 +330,19 @@ span.picture {
   input {
     border: 0;
   }
+}
+
+/* navbar */
+.nav-cont {
+  width: 100%;
+}
+
+.navbar,
+.navbar-nav{
+  margin: 0;
+}
+
+header{
+  margin: 0;
+  padding: 0;
 }
