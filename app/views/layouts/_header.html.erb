@@ -13,6 +13,12 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-inverse navbar-right">
+            <% if user_signed_in? %>
+              <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+            <% else %>
+              <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+              <li><%= link_to 'Log In', new_user_session_path %></li>
+            <% end %>
             <li><%= link_to 'About', about_path %></li>
             <li><%= link_to 'Contact', contact_path %></li>
             <li class="dropdown">
