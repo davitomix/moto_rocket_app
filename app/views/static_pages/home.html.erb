@@ -1,10 +1,28 @@
-<div class="center jumbotron">
-  <h1>Moto Rockt Mx</h1>
+<% if user_signed_in? %>
+  <div class="row p-fifty">
+    <aside class="col-md-3">
+      <section class="user_info">
+        <%= render 'shared/user_info' %>
+      </section>
+      <section class="stats">
+        <%#= render 'shared/stats' %>
+      </section>
+    </aside>
+    <div class="col-md-9">
+      <h3>Post Feed</h3>
+      <div class="postform">
+        <%#= render 'shared/post_form' %>
+      </div>
+    </div>
+  </div>
+<% else %>
+  <div class="center jumbotron">
+    <h1>Moto Rockt Mx</h1>
 
-  <h2>
-    The place where you can share post about experiences, how-to's, 
-    tutorials or whatever related to motorcycles.
-  </h2>
-
-  <%= link_to "Sign up now!", '#', class: "btn btn-lg btn-primary" %>
-</div>
+    <h2>
+      The place where you can share post about experiences, how-to's, 
+      tutorials or whatever related to motorcycles.
+    </h2>
+    <%= link_to 'Sign up now!', new_user_registration_path, class: "btn btn-lg btn-primary" %>
+  </div>
+<% end %>

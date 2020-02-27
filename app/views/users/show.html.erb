@@ -1,3 +1,11 @@
-<div class="p-fifty">
-    <p> User: <%= @user.email %> </p>  
+<% provide(:title, @user.username) %>
+<div class="row p-fifty">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1>
+        <%= gravatar_for @user %>
+        <%= @user.username %>
+      </h1>
+    </section>
+  </aside>
 </div>
