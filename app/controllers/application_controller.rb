@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   # before_action :authenticate_user!
+  helper_method %i[current_user current_user? logged_in?]
   before_action :configure_permitted_parameters, if: :devise_controller?, only: %i[create update]
   protect_from_forgery with: :exception
 
@@ -20,6 +21,11 @@ class ApplicationController < ActionController::Base
   def correct_user
     @user = User.find(params[:id])
     redirect_to(root_url) unless current_user?(@user)
+  end
+
+  # Confirms an admin user.
+  def admin_user
+    redirect_to(root_url) unless current_user.admin?
   end
 
   protected
