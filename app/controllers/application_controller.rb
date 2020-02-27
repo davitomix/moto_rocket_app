@@ -11,6 +11,17 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  # Returns true if the given user is the current user.
+  def current_user?(user)
+    user == current_user
+  end
+  
+  # Confirms the correct user.
+  def correct_user
+    @user = User.find(params[:id])
+    redirect_to(root_url) unless current_user?(@user)
+  end
+
   protected
 
   def configure_permitted_parameters
