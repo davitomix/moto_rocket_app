@@ -60,4 +60,12 @@ RSpec.describe User, type: :model do
       expect(user_clone).to_not be_valid
     end
   end
+
+  it 'associated posts should be destroyed' do
+    post = user.posts.create!(content: 'Lorem Ipsum')
+    expect(post).to eq(Post.first)
+    user.destroy
+    post = Post.first
+    expect(post).to eq(nil)
+  end
 end
