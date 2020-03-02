@@ -22,6 +22,6 @@ test:
 
 production:
   <<: *default
-  database: rocket_moto_production
-  username: rocket_moto
-  password: <%= ENV['ROCKET_MOTO_DATABASE_PASSWORD'] %>
+  database: <%= ENV['ROCKET_MOTO_DB_DATABASE'] %>
+  username: <%= ENV['ROCKET_MOTO_DB_USERNAME'] %>
+  password: <%= ENV['ROCKET_MOTO_DB_PASSWORD'] %>
