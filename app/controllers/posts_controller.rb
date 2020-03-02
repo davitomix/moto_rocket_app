@@ -13,7 +13,7 @@ class PostsController < ApplicationController
     end
     redirect_to root_url
   end
-  
+
   def destroy
     @user = Post.find(params[:id]).user_id
     Post.find(params[:id]).destroy

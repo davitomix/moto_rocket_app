@@ -20,7 +20,7 @@ RSpec.describe Post, type: :model do
   end
 
   it 'content should be present' do
-    post.content = "      "
+    post.content = '      '
     expect(post).to_not be_valid
   end
 

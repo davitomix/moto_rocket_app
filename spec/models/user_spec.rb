@@ -3,7 +3,6 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-
   let(:user) do
     User.create!(username: 'Foobar', email: 'foobar@bar.com',
                  password: 'foobar', password_confirmation: 'foobar')
@@ -52,10 +51,10 @@ RSpec.describe User, type: :model do
   describe 'uniqueness' do
     it 'is not valid a duplicated username' do
       user = User.create!(username: 'Foobar', email: 'foobar@bar.com',
-        password: 'foobar', password_confirmation: 'foobar')
+                          password: 'foobar', password_confirmation: 'foobar')
       expect(user).to be_valid
       user_clone = User.create!(username: 'Foobar2', email: 'foobar2@bar.com',
-        password: 'foobar2', password_confirmation: 'foobar2')
+                                password: 'foobar2', password_confirmation: 'foobar2')
       user_clone.username = 'foobar'
       expect(user_clone).to_not be_valid
     end
