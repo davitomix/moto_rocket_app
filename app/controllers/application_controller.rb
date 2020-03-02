@@ -1,8 +1,8 @@
 class ApplicationController < ActionController::Base
-  # before_action :authenticate_user!
   helper_method %i[current_user?]
   before_action :configure_permitted_parameters, if: :devise_controller?, only: %i[create update]
   protect_from_forgery with: :exception
+  require 'will_paginate/array'
 
   # Returns true if the given user is the current user.
   def current_user?(user)
