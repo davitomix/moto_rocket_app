@@ -19,12 +19,13 @@ class User < ApplicationRecord
                                    foreign_key: "followed_id",
                                    dependent:   :destroy
   has_many :followers, through: :passive_relationships, source: :follower  
+  default_scope -> { order(created_at: :desc) }
 
   def feed
     following_ids = "SELECT followed_id FROM relationships
                     WHERE  follower_id = :user_id"
     Post.where("user_id IN (#{following_ids})
-                    OR user_id = :user_id", user_id: id).take(40)
+                    OR user_id = :user_id", user_id: id).includes(:user).take(40)
   end
 
   # Follows a user.
