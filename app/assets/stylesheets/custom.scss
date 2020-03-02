@@ -14,7 +14,7 @@ $gray-medium-light: #eaeaea;
 /* universal */
 
 body {
-  padding-top: 60px;
+  padding-top: 0;
 }
 
 section {
@@ -26,6 +26,7 @@ textarea {
 }
 
 .center {
+  margin-top: 50px;
   text-align: center;
   h1 {
     margin-bottom: 10px;
@@ -64,7 +65,7 @@ p {
 
 #logo {
   float: left;
-  margin-right: 10px;
+  margin-left: 50px;
   font-size: 1.7em;
   color: white;
   text-transform: uppercase;
@@ -80,8 +81,8 @@ p {
 /* footer */
 
 footer {
-  margin-top: 45px;
-  padding-top: 5px;
+  margin-top: 0;
+  padding-top: 0;
   border-top: 1px solid $gray-medium-light;
   color: $gray-light;
   a {
@@ -330,4 +331,23 @@ span.picture {
   input {
     border: 0;
   }
+}
+
+/* Navbar */
+.nav-cont {
+  width: 100%;
+}
+
+.navbar,
+.navbar-nav{
+  margin: 0;
+}
+
+header{
+  margin: 0;
+  padding: 0;
+}
+
+.p-sixty{
+  margin-top: 60px;
 }
