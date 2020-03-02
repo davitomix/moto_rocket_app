@@ -12,9 +12,11 @@ $gray-medium-light: #eaeaea;
 }
 
 /* universal */
-
-body {
+html,
+body,
+.container-fluid {
   padding-top: 0;
+  height: 100%;
 }
 
 section {
@@ -128,9 +130,13 @@ aside {
       padding-top: 0;
     }
     span {
+      a {
+        color: #6D8297;
+      }
       display: block;
       margin-bottom: 3px;
       line-height: 1;
+      color: #6D8297;
     }
     h1 {
       font-size: 1.4em;
@@ -138,8 +144,14 @@ aside {
       letter-spacing: -1px;
       margin-bottom: 3px;
       margin-top: 0px;
+      color: #6D8297;
     }
   }
+}
+
+.aside-left{
+  min-height: 1197px;
+  background-color: #213346;
 }
 
 .gravatar {
@@ -157,9 +169,10 @@ aside {
   padding: 0;
   a {
     float: left;
+    margin-left: 20px;
     padding: 0 10px;
     border-left: 1px solid $gray-lighter;
-    color: gray;
+    color: #C2CEDA;
     &:first-child {
       padding-left: 0;
       border: 0;
@@ -349,5 +362,5 @@ header{
 }
 
 .p-sixty{
-  margin-top: 60px;
+  margin-top: 50px;
 }
