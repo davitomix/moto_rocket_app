@@ -33,7 +33,6 @@ ActiveRecord::Schema.define(version: 2020_03_02_152452) do
     t.string "username", default: "", null: false
     t.boolean "admin", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["username"], name: "index_users_on_username", unique: true
   end
 
 end
