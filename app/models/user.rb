@@ -9,6 +9,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :posts, dependent: :destroy
+
+  def feed
+    Post.where("user_id = ?", id)
+  end
+   
   private
 
   # Converts email to all lower-case.

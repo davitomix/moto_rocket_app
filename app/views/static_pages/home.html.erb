@@ -13,6 +13,12 @@
       <div class="postform">
         <%= render 'shared/post_form' %>
       </div>
+      <% if current_user.posts.any? %>
+        <ol class="microposts">
+          <%= render @feed_items %>
+        </ol>
+        <%= will_paginate @feed_items %>
+      <% end %>
     </div>
   </div>
 <% else %>
