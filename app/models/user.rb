@@ -19,7 +19,6 @@ class User < ApplicationRecord
                                    foreign_key: 'followed_id',
                                    dependent: :destroy
   has_many :followers, through: :passive_relationships, source: :follower
-  default_scope -> { order(created_at: :desc) }
 
   def feed
     following_ids = "SELECT followed_id FROM relationships
