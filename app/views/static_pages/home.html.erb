@@ -24,6 +24,12 @@
         <%= will_paginate @feed_items %>
       <% end %>
     </div>
+    <aside class="col-md-3 aside-right">
+      <h3>Who to follow</h3>
+      <ol class="whotofollow">
+        <%= render @who_items %>
+      </ol>
+    </aside>
   </div>
 <% else %>
   <div class="center jumbotron">

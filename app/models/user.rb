@@ -27,6 +27,13 @@ class User < ApplicationRecord
                     OR user_id = :user_id", user_id: id).includes(:user).take(40)
   end
 
+  def whotofollow
+    following_ids = "SELECT followed_id FROM relationships
+                    WHERE  follower_id = :user_id"
+    User.where("id NOT IN (#{following_ids})
+                    AND id != :user_id", user_id: id).take(10)
+  end
+
   # Follows a user.
   def follow(other_user)
     following << other_user

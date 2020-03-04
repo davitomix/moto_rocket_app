@@ -4,6 +4,7 @@ class StaticPagesController < ApplicationController
 
     @post = current_user.posts.build
     @feed_items = current_user.feed.paginate(page: params[:page], per_page: 10)
+    @who_items = current_user.whotofollow
   end
 
   def about; end
