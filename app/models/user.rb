@@ -34,6 +34,13 @@ class User < ApplicationRecord
                     AND id != :user_id", user_id: id).take(10)
   end
 
+  def followed_by
+    followed_ids = "SELECT follower_id FROM relationships
+                    WHERE  followed_id = :user_id"
+    User.where("id IN (#{followed_ids})
+                    AND id != :user_id", user_id: id).take(10)
+  end
+
   # Follows a user.
   def follow(other_user)
     following << other_user
