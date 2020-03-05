@@ -1,25 +1,26 @@
-/* mixins, variables, etc. */
+/* header */
 
-$gray-medium-light: #eaeaea;
-
-@mixin box_sizing {
-  -moz-box-sizing:    border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing:         border-box;
+#logo {
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+  &:hover {
+    color: black;
+    text-decoration: none;
+  }
 }
 
-/* universal */
-html,
-body,
-.container-fluid {
-  padding-top: 0;
-  height: 100%;
-}
-
-h1 {
-  font-size: 3em;
-  letter-spacing: -2px;
-  margin-bottom: 30px;
-  text-align: center;
-  color: purple;
+.nav-cust{
+  margin: 10px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+  &:hover {
+    color: black;
+    text-decoration: none;
+  }
 }
