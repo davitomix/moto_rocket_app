@@ -18,7 +18,7 @@ class PostsController < ApplicationController
     @user = Post.find(params[:id]).user_id
     Post.find(params[:id]).destroy
     flash[:success] = 'Post deleted'
-    redirect_to user_url(@user) || root_url
+    redirect_to root_url
   end
 
   private

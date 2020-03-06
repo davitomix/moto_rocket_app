@@ -1,11 +1,15 @@
 <% provide(:title, 'Sign up') %>
 <% provide(:button_text, 'Create my account') %>
-<h1>Sign up</h1>
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
+<div class="row d-flex justify-content-center">
+  <div class="col-md-8 justify-content-center">
+    <div class="d-flex justify-content-center">
+      <h1 class="btn-box">Sign up</h1>
+    </div>
     <%= render 'form_user' %>
-    <span>
-      <%= render "devise/shared/links" %>
-    </span>
+    <div class="d-flex justify-content-center">
+      <span>
+        <%= render "devise/shared/links" %>
+      </span>
+    </div>
   </div>
 </div>
