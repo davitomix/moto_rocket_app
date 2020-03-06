@@ -56,7 +56,7 @@ $ rails server
 
 ## Heroku Live Version :computer:
 
-- [Live version 🧁](#) <br>
+- [Live version 🧁](https://rocket-moto-mx.herokuapp.com) <br>
 
 ## 🤝 Contributing
 
