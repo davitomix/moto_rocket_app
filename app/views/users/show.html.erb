@@ -18,9 +18,9 @@
     <div class="mx-auto">
       <%= link_to gravatar_for(@user, size: 200), @user %>
     </div>
-
-    <%= render 'follow_form' if user_signed_in? %>
-
+    <div class="btn-box">
+      <%= render 'follow_form' if user_signed_in? %>
+    </div>
     <% if @user.posts.any? %>
       <div class="d-flex h-title btn-box">
         <h3 class="mx-auto">Posts (<%= @user.posts.count %>)</h3>
