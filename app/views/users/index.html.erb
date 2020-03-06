@@ -1,12 +1,12 @@
 <% provide(:title, 'All users') %>
-<h1>All users</h1>
-
-<%= will_paginate %>
-
-<ul class="users">
-  <% @users.each do |user| %>
-    <%= render @users %>
-  <% end %>
-</ul>
-
-<%= will_paginate %>
+<div class="col-md-12 d-flex flex-column justify-content-center">
+  <div class="d-flex h-title btn-box">
+    <h1 class="mx-auto">All users</h1>
+  </div>
+  <div class="row-flex justify-content-center btn-box">
+    <ol class="users">
+      <%= render @users %>
+    </ol>
+    <%= will_paginate %>
+  </div>
+</div>

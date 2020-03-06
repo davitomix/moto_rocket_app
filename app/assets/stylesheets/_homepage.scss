@@ -83,6 +83,10 @@ textarea{
 .whotofollow{
   list-style: none;
   padding: 0;
+  li:first-child {
+    padding: 8px 0;
+    border-top: 0;
+  }
   li {
     padding: 10px 0;
     border-top: 1px solid #e8e8e8;
@@ -140,5 +144,18 @@ textarea{
   a:hover,
   a:focus {
     text-decoration: underline; 
+  }
+}
+
+/* Users index */
+
+.users {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-500;
   }
 }
