@@ -7,7 +7,7 @@ class Post < ApplicationRecord
   validate :picture_size
 
   scope :show, ->(number) { take(number) }
-  
+
   private
 
   # Validates the size of an uploaded picture.

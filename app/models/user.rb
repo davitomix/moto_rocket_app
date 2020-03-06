@@ -21,7 +21,6 @@ class User < ApplicationRecord
   has_many :followers, through: :passive_relationships, source: :follower
 
   scope :show, ->(number) { take(number) }
-  
 
   def feed
     following_ids = "SELECT followed_id FROM relationships
