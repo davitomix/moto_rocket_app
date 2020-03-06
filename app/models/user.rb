@@ -20,25 +20,28 @@ class User < ApplicationRecord
                                    dependent: :destroy
   has_many :followers, through: :passive_relationships, source: :follower
 
+  scope :show, ->(number) { take(number) }
+  
+
   def feed
     following_ids = "SELECT followed_id FROM relationships
                     WHERE  follower_id = :user_id"
     Post.where("user_id IN (#{following_ids})
-                    OR user_id = :user_id", user_id: id).includes(:user).take(40)
+                    OR user_id = :user_id", user_id: id).includes(:user)
   end
 
   def whotofollow
     following_ids = "SELECT followed_id FROM relationships
                     WHERE  follower_id = :user_id"
     User.where("id NOT IN (#{following_ids})
-                    AND id != :user_id", user_id: id).take(10)
+                    AND id != :user_id", user_id: id)
   end
 
   def followed_by
     followed_ids = "SELECT follower_id FROM relationships
                     WHERE  followed_id = :user_id"
     User.where("id IN (#{followed_ids})
-                    AND id != :user_id", user_id: id).take(10)
+                    AND id != :user_id", user_id: id)
   end
 
   # Follows a user.
