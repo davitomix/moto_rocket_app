@@ -57,6 +57,7 @@ $ rails server
 ## Heroku Live Version :computer:
 
 - [Live version 🧁](https://rocket-moto-mx.herokuapp.com) <br>
+- Try it! Join with these credentials :arrow_right: user: 'user2' | password: 'password' :rocket:
 
 ## 🤝 Contributing
 
