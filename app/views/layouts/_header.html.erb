@@ -7,9 +7,9 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
       <% if user_signed_in? %>
-        <li class="nav-item"><%= link_to "Profile", current_user, class: "nav-cust" %></li>
-        <li class="nav-item"><%= link_to 'Users', users_path, class: "nav-cust" %></li>
-        <li class="nav-item"><%= link_to 'Logout', destroy_user_session_path, class: "nav-cust", method: :delete %></li>
+        <li class="nav-item d-flex"><%= link_to "Profile", current_user, class: "nav-cust" %></li>
+        <li class="nav-item d-flex"><%= link_to 'Users', users_path, class: "nav-cust" %></li>
+        <li class="nav-item d-flex"><%= link_to 'Logout', destroy_user_session_path, class: "nav-cust", method: :delete %></li>
       <% else %>
         <li class="nav-item d-flex"><%= link_to 'Sign Up', new_user_registration_path, class: "nav-cust" %></li>
         <li class="nav-item d-flex"><%= link_to 'Log In', new_user_session_path, class: "nav-cust" %></li>

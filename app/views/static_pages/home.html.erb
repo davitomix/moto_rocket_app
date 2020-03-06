@@ -1,30 +1,30 @@
 <% if user_signed_in? %>
   <div class="row">
-    <aside class="col-md-3 aside-left">
-      <div class="row">
-        <div class="col-md-12">
-          <section class="user_info">
-            <%= render 'shared/user_info' %>
-          </section>
-          <section class="stats">
-            <%= render 'shared/stats' %>
-          </section>
-        </div>
-      </div>
+    <aside class="col-md-3 aside-left-bar">
+      <section class="d-flex justify-content-center">
+        <%= render 'shared/user_info' %>
+      </section>
+      <section class="stats d-flex justify-content-center">
+        <%= render 'shared/stats' %>
+      </section>
     </aside>
-    <div class="col-md-6">
-      <h3>Post Feed</h3>
-      <div class="postform">
+    <div class="col-md-6 d-flex flex-column justify-content-center">
+      <div class="d-flex">
+        <h3 class="mx-auto">Post Feed</h3>
+      </div>
+      <div class="d-flex post-box">
         <%= render 'shared/post_form' %>
       </div>
       <% if current_user.posts.any? %>
+      <div class="row-flex justify-content-center">
         <ol class="microposts">
           <%= render @feed_items %>
         </ol>
         <%= will_paginate @feed_items %>
+      </div>
       <% end %>
     </div>
-    <aside class="col-md-3 aside-right">
+    <aside class="col-md-3">
       <h3>Who to follow</h3>
       <ol class="whotofollow">
         <%= render @who_items %>
