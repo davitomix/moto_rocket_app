@@ -13,7 +13,7 @@ A Twitter-like web app where you can see posts about motorcycles. :bike: 👨‍
 ![screenshot](./main.gif)
 
 ## Mobile
-![screenshot](./mobile.png)
+![screenshot](./mobile.gif)
 
 ## Built With
 - Ruby
@@ -64,6 +64,9 @@ $ rails server
 ## Usage 
 Create a new account using the sign up button and fill the form or you can use these credentials :arrow_right: user: 'user2' | password: 'password'
 Login and start using this app like any other social app, you can create posts, follow another users and accept/reject followers!
+
+## Video Explanation
+[:video_camera:](#)
 
 ## Future Implementations :fast_forward:
 - Like posts.
