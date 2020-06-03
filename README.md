@@ -13,7 +13,9 @@ A Twitter-like web app where you can see posts about motorcycles. :bike: 👨‍
 ![screenshot](./main.gif)
 
 ## Mobile
-![screenshot](./mobile.gif)
+<p align="center">
+  <img src="./mobile1.gif">
+</p>
 
 ## Built With
 - Ruby
