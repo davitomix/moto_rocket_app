@@ -18,7 +18,7 @@ A Twitter-like web app where you can see posts about motorcycles. :bike: 👨‍
 - Rspec
 - Rubocop
 
-## Getting started
+## Getting started :dart:
 To get started with the app, clone the repo and then install the needed gems:
 
 ```
@@ -49,7 +49,7 @@ $ rspec spec/
 $ rubocop
 ```
 
-## Deploy 
+## Deploy :rocket:
 
 If the test suite passes, you'll be ready to run the app in a local server:
 
