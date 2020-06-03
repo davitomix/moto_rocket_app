@@ -62,15 +62,15 @@ $ rails server
 ```
 
 ## Usage 
-Create a new account using the sign up button and fill the form.
-Login using your username and start using this app like any other, you can create posts, follow another users and accept/reject followers!
+Create a new account using the sign up button and fill the form or you can use these credentials :arrow_right: user: 'user2' | password: 'password'
+Login and start using this app like any other social app, you can create posts, follow another users and accept/reject followers!
 
 ## Future Implementations :fast_forward:
-:arrow_right: Like posts.
-- :arrow_right: Comment posts.
-- :arrow_right: Like comments. 
-- :arrow_right: Edit, Update & Destroy comments.
-- :arrow_right: Image comments.
+- Like posts.
+- Comment posts.
+- Like comments. 
+- Edit, Update & Destroy comments.
+- Image comments.
 
 ## Authors
 👤 **David Eli Martinez Garcia**
