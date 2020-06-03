@@ -68,7 +68,7 @@ Create a new account using the sign up button and fill the form or you can use t
 Login and start using this app like any other social app, you can create posts, follow another users and accept/reject followers!
 
 ## Video Explanation
-[:video_camera:](#)
+[:video_camera:](https://www.loom.com/share/d221d13ad200443db124d6d9b6c5de88)
 
 ## Future Implementations :fast_forward:
 - Like posts.
