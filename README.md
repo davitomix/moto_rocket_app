@@ -85,7 +85,7 @@ Login and start using this app like any other social app, you can create posts, 
 - Mail: [davidelimg1@gmail.com](mailto:davidelimg1@gmail.com)
 
 ## Heroku Live Version :computer:
-- [Live version 🧁](https://rocket-moto-mx.herokuapp.com) -
+- [Live version 🧁](https://rocket-moto-mx.herokuapp.com)
 - Try it! Join with these credentials :arrow_right: user: 'user2' | password: 'password' :rocket:
 
 ## 🤝 Contributing
