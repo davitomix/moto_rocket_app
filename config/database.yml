@@ -22,4 +22,6 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: <%= ENV['ROCKET_MOTO_DB_DATABASE'] %>
+  username: <%= ENV['ROCKET_MOTO_DB_USERNAME'] %>
+  password: <%= ENV['ROCKET_MOTO_DB_PASSWORD'] %>

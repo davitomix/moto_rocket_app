@@ -1,0 +1,47 @@
+<% if user_signed_in? %>
+  <div class="row">
+    <aside class="col-md-3 aside-left-bar">
+      <section class="d-flex justify-content-center btn-box">
+        <%= render 'shared/user_info' %>
+      </section>
+      <section class="stats d-flex justify-content-center">
+        <%= render 'shared/stats' %>
+      </section>
+    </aside>
+    <div class="col-md-6 d-flex flex-column justify-content-center">
+      <div class="d-flex h-title btn-box">
+        <h3 class="mx-auto">Post Feed</h3>
+      </div>
+      <div class="d-flex post-box btn-box">
+        <%= render 'shared/post_form' %>
+      </div>
+      <% if current_user.posts.any? %>
+      <div class="row-flex justify-content-center btn-box">
+        <ol class="microposts">
+          <%= render @feed_items %>
+        </ol>
+        <%= will_paginate @feed_items %>
+      </div>
+      <% end %>
+    </div>
+    <aside class="col-md-3">
+      <div class="d-flex h-title btn-box">
+        <h3 class="mx-auto">Who to follow</h3>
+      </div>
+      <div class="row-flex justify-content-center btn-box">
+        <ol class="whotofollow">
+          <%= render @who_items %>
+        </ol>
+      </div>
+    </aside>
+  </div>
+<% else %>
+  <div class="center jumbotron">
+    <h1>Moto Rockt Mx</h1>
+    <h2>
+      The place where you can share post about experiences, how-to's, 
+      tutorials or whatever related to motorcycles.
+    </h2>
+    <%= link_to 'Sign up now!', new_user_registration_path, class: "btn btn-lg btn-primary" %>
+  </div>
+<% end %>

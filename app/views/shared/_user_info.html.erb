@@ -1,0 +1,6 @@
+<div class="d-flex flex-column justify-content-center">
+  <%= link_to gravatar_for(current_user, size: 100), current_user %>
+  <h1><%= current_user.username %></h1>
+  <span><%= link_to "view my profile", current_user %></span>
+  <span class="mx-auto"><%= pluralize(current_user.posts.count, "post") %></span>
+</div>

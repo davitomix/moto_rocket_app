@@ -1,0 +1,29 @@
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $gray-500;
+  color: $gray-400;
+  a {
+    color: $gray-700;
+    &:hover {
+      color: $gray-900;
+    }
+  }
+  small {
+    float: left;
+    margin-left: 15px;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+    li:last-child{
+      margin-right: 15px;
+    }
+  }
+}

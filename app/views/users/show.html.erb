@@ -1,0 +1,44 @@
+<% provide(:title, @user.username) %>
+<div class="row">
+  <aside class="col-md-3 aside-left-bar">
+    <section class="d-flex justify-content-center btn-box">
+      <div class="d-flex flex-column justify-content-center">
+        <%= link_to gravatar_for(@user, size: 100), @user %>
+        <h1><%= @user.username %></h1>
+        <span class="mx-auto"><%= pluralize(@user.posts.count, "post") %></span>
+      </div>
+    </section>
+    <section class="d-flex justify-content-center btn-box">
+      <%= render 'shared/stats' %>
+    </section>
+  </aside>
+
+
+  <div class="col-md-6 d-flex flex-column justify-content-center">
+    <div class="mx-auto">
+      <%= link_to gravatar_for(@user, size: 200), @user %>
+    </div>
+    <div class="btn-box">
+      <%= render 'follow_form' if user_signed_in? %>
+    </div>
+    <% if @user.posts.any? %>
+      <div class="d-flex h-title btn-box">
+        <h3 class="mx-auto">Posts (<%= @user.posts.count %>)</h3>
+      </div>
+      <ol class="microposts">
+        <%= render @posts %>
+      </ol>
+      <%= will_paginate @posts %>
+    <% end %>
+  </div>
+
+
+  <aside class="col-md-3">
+    <div class="d-flex h-title btn-box">
+      <h3 class="mx-auto">Followed by</h3>
+    </div>
+    <ol class="whotofollow">
+      <%= render @followers %>
+    </ol>
+  </aside>
+</div>
