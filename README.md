@@ -78,11 +78,12 @@ Login and start using this app like any other social app, you can create posts, 
 - Image comments.
 
 ## Authors
-👤 **David Eli Martinez Garcia**
 
-- Github: [@davitomix](https://github.com/davitomix)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
-- Mail: [davidelimg1@gmail.com](mailto:davidelimg1@gmail.com)
+👤 **David Martínez**
+
+- Github: [@davomartinez-dev](https://github.com/davomartinez-dev)
+- Twitter: [@davomartinezdev](https://twitter.com/davomartinezdev)
+- LinkedIn: [David Martínez](https://www.linkedin.com/in/davidelimartinez/)
 
 ## Heroku Live Version :computer:
 - [Live version 🧁](https://rocket-moto-mx.herokuapp.com)
